@@ -13,6 +13,7 @@ def get_orders():
     headers = {
         'Authorization': f'Bearer {BASE_API_KEY}'
     }
+    print(f"API Key: {BASE_API_KEY}")
     response = requests.get(BASE_URL, headers=headers)
     print(response.json())  # データをターミナルに出力して確認
     return response.json()
