@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hazbin Hotel Typing Challenge</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="video-background">
+        <div id="player"></div>
+    </div>
+
+    <div class="container">
+        <h1>Hazbin Hotel Typing Challenge</h1>
+        
+        <div class="game-container">
+            <div class="character-name" id="character-name"></div>
+            <div class="quote-display" id="quote-display"></div>
+            <input type="text" id="quote-input" autocomplete="off">
+            <div class="stats">
+                <div class="score">Score: <span id="score">0</span></div>
+                <div class="timer">Time: <span id="timer">0</span>s</div>
+            </div>
+        </div>
+
+        <button id="start-btn">Start Game</button>
+        <button id="toggle-music">Toggle Video</button>
+    </div>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="{{ url_for('static', filename='js/game.js') }}"></script>
+</body>
+</html>

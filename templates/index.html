@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>シンプルテキストエディタ</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://www.youtube.com/iframe_api"></script>
+</head>
+<body>
+    <div class="editor-container">
+        <textarea id="editor" placeholder="ここに文字を入力してください..."></textarea>
+    </div>
+    <!-- YouTube動画プレーヤーを非表示で配置 -->
+    <div id="player" style="display: none;"></div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html> 
