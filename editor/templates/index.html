@@ -3,7 +3,6 @@
 <head>
     <title>シンプルテキストエディタ</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <script src="https://www.youtube.com/iframe_api"></script>
 </head>
 <body>
     <div class="editor-container">
@@ -11,6 +10,16 @@
     </div>
     <!-- YouTube動画プレーヤーを非表示で配置 -->
     <div id="player" style="display: none;"></div>
+    
+    <!-- YouTube IFrame API -->
+    <script>
+        // YouTube IFrame APIの読み込み
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    </script>
+    
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
